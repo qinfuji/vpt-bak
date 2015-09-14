@@ -1,9 +1,15 @@
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import 'babel/polyfill';
+import React  from 'react';
 import ReactDOM from 'react-dom';
 import FastClick from 'fastclick';
-import App from 'components/App'
+import dispatcher from './core/dispatcher';
+import router from './router';
+import location from './core/location';
+import ActionTypes from './constants/ActionTypes';
+
+import App from './components/App';
 
 const container = document.getElementById('app');
 const context = {
@@ -24,8 +30,24 @@ const context = {
   }
 };
 
-function run(){
-     ReactDOM.render(component, container);
+function run() {
+  
+  router.dispatch({ path: window.location.pathname, context }, (state, component) => {
+    ReactDOM.render(component, container, () => {
+      let css = document.getElementById('css');
+      css.parentNode.removeChild(css);
+    });
+  });
+
+  dispatcher.register(action => {
+    if (action.type === ActionTypes.CHANGE_LOCATION) {
+      router.dispatch({ path: action.path, context }, (state, component) => {
+        ReactDOM.render(component, container);
+      });
+    }
+  });
+
+    //ReactDOM.render(<App></App>, container);
 }
 
 function handlePopState(event) {
