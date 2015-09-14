@@ -1,0 +1,19 @@
+{
+  "name": "vpt",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qinfuji/vpt.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qinfuji/vpt/issues"
+  },
+  "homepage": "https://github.com/qinfuji/vpt#readme"
+}
