@@ -1,0 +1,45 @@
+.VSplitPanel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.VSplitPanel .top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 200px;
+}
+
+.VSplitPanel .bottom {
+    z-index: 99;
+    position: absolute;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    min-height: 60px;
+    display: block;
+   
+}
+
+.VSplitPanel .splitter {
+   height: 0px;
+   bottom: 200px;
+   left: 0px;
+   right: 0px;
+   position: absolute;
+   display: block;
+   cursor: ns-resize;
+   background: black;
+}
+
+
+.VSplitPanel .splitter div {
+    height: 5px;
+    margin-top: -2px;
+    position: absolute;
+    width: 100%;
+}

@@ -1,0 +1,41 @@
+.HSplitPanel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+}
+
+.HSplitPanel .left {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    min-width: 36px;
+    display: block;
+    width:282px;
+}
+
+.HSplitPanel .right {
+   right: 0;
+   top: 0;
+   bottom: 0;
+   left: 282px;
+   position: absolute;
+
+}
+
+.HSplitPanel .splitter {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	left: 282px;
+	cursor: ew-resize;
+    box-sizing: border-box;
+}
+
+.HSplitPanel .splitter div {
+    width: 5px;
+    margin-left: -3px;
+    height: 100%;
+}
